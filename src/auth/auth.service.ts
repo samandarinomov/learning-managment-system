@@ -36,15 +36,4 @@ export class AuthService {
 
         return { accessToken, refreshToken };
     }
-
-
-    async refreshToken(refreshToken: string) {
-  try {
-      const payload = this.jwtService.verify(refreshToken);
-      return this.generateTokens(payload.userId);
-  } catch (error) {
-      throw new UnauthorizedException('Yaroqsiz token');
-  }
-}
-
 }
