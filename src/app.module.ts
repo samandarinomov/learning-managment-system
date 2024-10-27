@@ -8,7 +8,7 @@ import { LessonsModule } from './lessons/lessons.module';
 import { AssignmentsModule } from './assignments/assignments.module';
 import { ResultsModule } from './results/results.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Auth } from './auth/entities/auth.entity';
+import { User } from './auth/entities/user.entity';
 import { Assignment } from './assignments/entities/assignment.entity';
 import { Course } from './courses/entities/course.entity';
 import { Modules } from './modules/entities/module.entity';
@@ -23,7 +23,7 @@ import { Result } from './results/entities/result.entity';
       port: 5432,
       password: 'Fede1519',
       username: 'postgres',
-      entities: [Auth, Assignment, Course, Modules, Lesson, Result],
+      entities: [User, Assignment, Course, Modules, Lesson, Result],
       database: 'final',
       synchronize: true,
       logging: true,
