@@ -1,21 +1,25 @@
 import {
     IsNotEmpty,
     IsString,
+    IsEnum,
     IsEmail,
   } from 'class-validator';
   
-  export class CreateAuthDto {
+  export class CreateUserDto {
    
-    @IsNotEmpty()
     @IsString()
     fullname: string;
-    
-    @IsNotEmpty()
+  
+   
     @IsEmail()
     email: string;
+  
     
-    @IsNotEmpty()
     @IsString()
     password: string;
+  
+    
+    @IsString()
+    birth_date: string;
   }
   
