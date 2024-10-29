@@ -10,7 +10,8 @@ import { JwtModule } from '@nestjs/jwt';
 @Module({
   imports: [
     JwtModule.register({
-      secret: 'verySecret'
+      secret: 'verySecret',
+      signOptions: { expiresIn: '1h' }
     }),
     TypeOrmModule.forFeature([Modules, Course, User]),
   ],

@@ -9,6 +9,9 @@ export class Lesson {
     @Column({type: 'varchar'})
     name: String
 
+    @Column({type: 'varchar'})
+    content: String
+
     @ManyToOne(() => Modules, (module) => module.lessons)
     module: Modules
 }

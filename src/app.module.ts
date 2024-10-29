@@ -14,9 +14,7 @@ import { Course } from './courses/entities/course.entity';
 import { Modules } from './modules/entities/module.entity';
 import { Lesson } from './lessons/entities/lesson.entity';
 import { Result } from './results/entities/result.entity';
-import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
-import { Admin } from 'typeorm';
 import { Auth } from './auth/entities/auth.entity';
 
 @Module({
@@ -25,10 +23,10 @@ import { Auth } from './auth/entities/auth.entity';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      password: 'avaz1514',
+      password: 'Fede1519',
       username: 'postgres',
-      entities: [User, Assignment, Admin, Auth, Course, Modules, Lesson, Result],
-      database: 'samandar',
+      entities: [User, Assignment, Auth, Course, Modules, Lesson, Result],
+      database: 'finalexam',
       synchronize: true,
       logging: false,
       autoLoadEntities: true
@@ -39,7 +37,6 @@ import { Auth } from './auth/entities/auth.entity';
     LessonsModule,
     AssignmentsModule,
     ResultsModule,
-    AdminModule,
     UserModule,
   ],
   controllers: [AppController],

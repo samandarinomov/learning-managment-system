@@ -1,21 +1,36 @@
-import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { CourseService } from './courses.service';
-import { Course } from './entities/course.entity';
+import { CreateCourseDto } from './dto/create-course.dto';
+import { UpdateCourseDto } from './dto/update-course.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
-import { AdminGuard } from 'src/admin/admin.guard';
+import { RoleGuard } from 'src/auth/role.guard';
+import { Course } from './entities/course.entity';
 
 @Controller('course')
 export class CourseController {
-  constructor(private readonly CourseService: CourseService) {}
+  constructor(private readonly courseService: CourseService) { }
 
+  @UseGuards(AuthGuard, RoleGuard)
+  @Post()
+  async create(@Body() createCourseDto: CreateCourseDto): Promise<Course> {
+    return this.courseService.create(createCourseDto);
+  }
+  
+  @UseGuards(AuthGuard)
   @Get()
-  findAll() {
-    return this.CourseService.findAll();
+  findAll(): Promise<Course[]> {
+    return this.courseService.findAll();
   }
 
-  @UseGuards(AdminGuard, AuthGuard)
-  @Post()
-  create(@Body() course: Course) {
-    return this.CourseService.create(course);
+  @UseGuards(AuthGuard, RoleGuard)
+  @Patch(':id')
+  update(@Param('id') id: number, @Body() updateCourseDto: UpdateCourseDto): Promise<string> {
+    return this.courseService.update(id, updateCourseDto);
+  }
+
+  @UseGuards(AuthGuard, RoleGuard)
+  @Delete(':id')
+  remove(@Param('id') id: number): Promise<string> {
+    return this.courseService.remove(id);
   }
 }
