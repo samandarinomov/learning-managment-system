@@ -1,9 +1,11 @@
 import { Course } from "src/courses/entities/course.entity";
 import { Enrollment } from "src/enrollment/entities/enrollment.entity";
+import { Result } from "src/results/entities/result.entity";
 import {
   Column,
   Entity,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -29,5 +31,8 @@ export class User {
 
   @ManyToOne(() => Enrollment, enrollment => enrollment.user)
   enrollments: Enrollment[]
+
+  @OneToMany(() => Result, (result) => result.user)
+    result: Result[];
 }
 

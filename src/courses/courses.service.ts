@@ -20,7 +20,8 @@ export class CourseService {
     const course = await this.courseRepository.find({relations: [
       'modules',
       'modules.lessons',
-      'modules.lessons.assignment'  
+      'modules.lessons.assignment',
+      'modules.lessons.assignment.result'  
     ]})
     return course
   }
