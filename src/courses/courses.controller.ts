@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
 import { CourseService } from './courses.service';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
@@ -32,5 +32,17 @@ export class CourseController {
   @Delete(':id')
   remove(@Param('id') id: number): Promise<string> {
     return this.courseService.remove(id);
+  }
+
+  @Get('search')
+  async searchCourses(
+    @Query('category') category: string,
+    @Query('keyword') keyword: string,
+  ): Promise<{ message: string; data: Course[] }> {
+    const courses = await this.courseService.searchCourses(category, keyword);
+    return {
+      message: 'Ok',
+      data: courses,
+    };
   }
 }

@@ -42,4 +42,17 @@ export class CourseService {
     await this.courseRepository.delete(id);
     return "Course successfully deleted"
   }
-}
+
+  async searchCourses(category: string, keyword: string) {
+    const queryBuilder = this.courseRepository.createQueryBuilder('course');
+    if (category) {
+      queryBuilder.andWhere('course.category = :category', { category });
+    }
+
+    if (keyword) {
+      queryBuilder.andWhere('course.name LIKE :keyword', { keyword: `%${keyword}%` });
+    }
+  
+    return await queryBuilder.getMany();
+  }
+  }
