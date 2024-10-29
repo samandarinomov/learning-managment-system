@@ -36,7 +36,7 @@ export class AuthController {
   async login(@Body() loginDto: LoginDto, @Res() res: Response) {
     let { user, refresh_token, access_token } = await this.authService.login(loginDto);
     res.cookie('refresh_token', refresh_token, {
-      maxAge: 1000 * 60 * 60 * 24 * 30,
+      maxAge: 1000 * 60 * 60 * 20 * 20,
       sameSite: 'none',
       httpOnly: true,
     });

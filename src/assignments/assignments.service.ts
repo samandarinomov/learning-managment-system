@@ -1,26 +1,52 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateAssignmentDto } from './dto/create-assignment.dto';
 import { UpdateAssignmentDto } from './dto/update-assignment.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Assignment } from './entities/assignment.entity';
+import { Repository } from 'typeorm';
+import { Lesson } from 'src/lessons/entities/lesson.entity';
 
 @Injectable()
 export class AssignmentsService {
-  create(createAssignmentDto: CreateAssignmentDto) {
-    return 'This action adds a new assignment';
+  constructor(
+    @InjectRepository(Assignment)
+    private assignmentRepository: Repository<Assignment>,
+    @InjectRepository(Lesson)
+    private lessonRepository: Repository<Lesson>,
+  ) { }
+
+  async create({ task, description, deadline, lessonId }: CreateAssignmentDto) {
+    const lesson = await this.lessonRepository.findOneBy({ id: lessonId })
+    if (!lesson)
+      throw new HttpException('Assignment not found', HttpStatus.NOT_FOUND);
+    const assignment = await this.assignmentRepository.create({ task, description, deadline, lesson });
+    await this.assignmentRepository.save(assignment);
+    return assignment
   }
 
-  findAll() {
-    return `This action returns all assignments`;
+  async findAll(): Promise<Assignment[]> {
+    const assignment = await this.assignmentRepository.find({ relations: ['lesson'] })
+    return assignment
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} assignment`;
+  async update(id: number, { task, description, deadline, lessonId}: UpdateAssignmentDto): Promise<string> {
+    const lesson = await this.lessonRepository.findOneBy({ id: lessonId })
+    if (!lesson)
+      throw new HttpException('Lesson not found', HttpStatus.NOT_FOUND);
+    let assignment = await this.assignmentRepository.findOneBy({ id })
+    if (!assignment) {
+      throw new HttpException('Assignment not found', HttpStatus.NOT_FOUND);
+    }
+    await this.assignmentRepository.update({ id }, { task, description, deadline, lesson });
+    return `Assignment successfully updated`
   }
 
-  update(id: number, updateAssignmentDto: UpdateAssignmentDto) {
-    return `This action updates a #${id} assignment`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} assignment`;
+  async remove(id: number): Promise<string> {
+    let assignment = await this.assignmentRepository.findOneBy({ id })
+    if (!assignment) {
+      throw new HttpException('Assignment not found', HttpStatus.NOT_FOUND);
+    }
+    await this.assignmentRepository.delete(id);
+    return " Assignment deleted"
   }
 }

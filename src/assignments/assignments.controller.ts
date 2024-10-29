@@ -1,34 +1,36 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { AssignmentsService } from './assignments.service';
 import { CreateAssignmentDto } from './dto/create-assignment.dto';
 import { UpdateAssignmentDto } from './dto/update-assignment.dto';
+import { AuthGuard } from 'src/auth/auth.guard';
+import { RoleGuard } from 'src/auth/role.guard';
+import { Assignment } from './entities/assignment.entity';
 
-@Controller('assignments')
+@Controller('assignment')
 export class AssignmentsController {
-  constructor(private readonly assignmentsService: AssignmentsService) {}
+  constructor(private readonly assignmentsService: AssignmentsService) { }
 
+  @UseGuards(AuthGuard, RoleGuard)
   @Post()
-  create(@Body() createAssignmentDto: CreateAssignmentDto) {
+  create(@Body() createAssignmentDto: CreateAssignmentDto): Promise<Assignment> {
     return this.assignmentsService.create(createAssignmentDto);
   }
 
   @Get()
-  findAll() {
+  @UseGuards(AuthGuard)
+  findAll(): Promise<Assignment[]> {
     return this.assignmentsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.assignmentsService.findOne(+id);
-  }
-
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAssignmentDto: UpdateAssignmentDto) {
-    return this.assignmentsService.update(+id, updateAssignmentDto);
+  @UseGuards(AuthGuard, RoleGuard)
+  update(@Param('id') id: number, @Body() updateAssignmentDto: UpdateAssignmentDto): Promise<string> {
+    return this.assignmentsService.update(id, updateAssignmentDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.assignmentsService.remove(+id);
+  @UseGuards(AuthGuard,  RoleGuard)
+  remove(@Param('id') id: number): Promise<string> {
+    return this.assignmentsService.remove(id);
   }
 }
