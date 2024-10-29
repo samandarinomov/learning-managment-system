@@ -6,10 +6,9 @@ import {
   UseGuards,
   Req,
   Res,
-  UnauthorizedException,
+  Request
 } from '@nestjs/common';
 import { Response } from 'express';
-import { Request } from 'express';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { CreateAuthDto } from './dto/create-auth.dto';
@@ -57,23 +56,7 @@ export class AuthController {
 
   @UseGuards(AuthGuard)
   @Get('me')
-  getMyData(@Req() req: Request) {
-    return this.authService.getMyData(req['payload']);
-  }
-
-  @UseGuards(AuthGuard)
-  @Post('refresh')
-  async refresh(@Req() req: Request, @Res() res: Response) {
-    const refresh_token = req.cookies.refresh_token;
-    if (!refresh_token) {
-      throw new UnauthorizedException('Refresh token not found');
-    }
-    let payload = {
-      id: req['payload'].id,
-      email: req['payload'].email,
-      isAdmin: req['payload'].is_admin,
-    };
-    let newAccessToken = await this.authService.jwtService.sign(payload);
-    res.send({ newAccessToken });
+  getMyData(@Request() request) {
+    return this.authService.getMyData(request);
   }
 }

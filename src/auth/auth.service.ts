@@ -1,6 +1,5 @@
 import { ConflictException, Injectable, Res, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Response } from 'express';
 import { User } from 'src/user/entities/user.entity';
 import { Repository } from 'typeorm';
 import { CreateAuthDto } from './dto/create-auth.dto';
@@ -16,7 +15,7 @@ export class AuthService {
     public jwtService: JwtService,
   ) {}
 
-  async register({ fullname, email, password}: CreateAuthDto): Promise<User | any> {
+  async register({ fullname, email, password, role}: CreateAuthDto): Promise<User | any> {
     const findUserByEmail = await this.userRepository.findOneBy({ email });
     if (findUserByEmail) {
       throw new ConflictException('User with this email already exists');
@@ -26,13 +25,14 @@ export class AuthService {
     let newUser = await this.userRepository.create({
       fullname,
       email,
+      role,
       password: hashedPass,
     });
     await this.userRepository.save(newUser);
     let payload = {
       id: newUser.id,
       email: newUser.email,
-      isAdmin: newUser.is_admin,
+      role: newUser.role
     };
     let refresh_token = await this.jwtService.sign(payload);
     let access_token = await this.jwtService.sign(payload, { expiresIn: '1h' });
@@ -47,15 +47,20 @@ export class AuthService {
     let verify = await compare(password, user.password);
     if (!verify) throw new UnauthorizedException();
     
-    let payload = { id: user.id, login: user.email, isAdmin: user.is_admin };
+    let payload = { id: user.id, login: user.email, role: user.role };
     let refresh_token = await this.jwtService.sign(payload, {expiresIn: '7d' });
     let access_token = await this.jwtService.sign(payload, { expiresIn: '1h' });
     return {user, refresh_token, access_token};
   }
 
+  async getMyData(request) {
+    if (!request || !request.user || !request.user.id) {
+        throw new Error('Foydalanuvchi identifikatori topilmadi');
+    }
 
-  async getMyData(payload: any) {
-    const user = await this.userRepository.findOneBy({ id: payload.id });
+    const userId = request.user.id;
+    const user = await this.userRepository.findOne({where: { id: userId} });
     return user;
-  }
+}
+
 }
