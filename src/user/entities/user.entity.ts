@@ -23,7 +23,7 @@ export class User {
   @ManyToOne(() => Course, (course) => course.users)
   course: Course
 
-  @Column({ type: 'boolean', default: false })
-  is_admin: boolean;
+  @Column({ type: 'varchar'})
+  role: String;
 }
 
