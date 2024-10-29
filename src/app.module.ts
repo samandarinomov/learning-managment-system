@@ -16,6 +16,7 @@ import { Lesson } from './lessons/entities/lesson.entity';
 import { Result } from './results/entities/result.entity';
 import { UserModule } from './user/user.module';
 import { Auth } from './auth/entities/auth.entity';
+import { EnrollmentsModule } from './enrollment/enrollment.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { Auth } from './auth/entities/auth.entity';
     AssignmentsModule,
     ResultsModule,
     UserModule,
+    EnrollmentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

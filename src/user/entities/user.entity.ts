@@ -1,4 +1,5 @@
 import { Course } from "src/courses/entities/course.entity";
+import { Enrollment } from "src/enrollment/entities/enrollment.entity";
 import {
   Column,
   Entity,
@@ -20,10 +21,13 @@ export class User {
   @Column({ type: 'varchar' })
   password: string;
 
-  @ManyToOne(() => Course, (course) => course.users)
-  course: Course
+  @ManyToOne(()=> Course, (course) => course.users)
+  course: Course 
 
   @Column({ type: 'varchar'})
   role: String;
+
+  @ManyToOne(() => Enrollment, enrollment => enrollment.user)
+  enrollments: Enrollment[]
 }
 

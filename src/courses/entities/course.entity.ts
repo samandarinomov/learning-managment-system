@@ -8,6 +8,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Enrollment } from 'src/enrollment/entities/enrollment.entity';
 
 @Entity()
 export class Course {
@@ -37,4 +38,10 @@ export class Course {
 
   @OneToMany(() => Modules, (module) => module.course)
   modules: Modules[];
+
+  @OneToMany(() => Enrollment, enrollment => enrollment.course)
+  enrollments: Enrollment[]
+
+  @OneToMany(() => User, user => user.course)
+  user: User[]
 }

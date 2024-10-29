@@ -6,6 +6,7 @@ import { Modules } from 'src/modules/entities/module.entity';
 import { Course } from './entities/course.entity';
 import { User } from 'src/user/entities/user.entity';
 import { JwtModule } from '@nestjs/jwt';
+import { Enrollment } from 'src/enrollment/entities/enrollment.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { JwtModule } from '@nestjs/jwt';
       secret: 'verySecret',
       signOptions: { expiresIn: '1h' }
     }),
-    TypeOrmModule.forFeature([Modules, Course, User]),
+    TypeOrmModule.forFeature([Modules, Course, User, Enrollment]),
   ],
   controllers: [CourseController],
   providers: [CourseService],
