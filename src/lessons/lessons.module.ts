@@ -3,9 +3,15 @@ import { LessonsService } from './lessons.service';
 import { LessonsController } from './lessons.controller';
 import { Lesson } from './entities/lesson.entity';
 import { Modules } from 'src/modules/entities/module.entity';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
-  imports: [Lesson, Modules],
+  imports: [
+    JwtModule.register({
+      secret: 'verySecret'
+    }),
+    TypeOrmModule.forFeature([Lesson, Modules])],
   controllers: [LessonsController],
   providers: [LessonsService],
 })

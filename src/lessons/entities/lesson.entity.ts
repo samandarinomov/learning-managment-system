@@ -12,6 +12,6 @@ export class Lesson {
     @Column({type: 'varchar'})
     content: String
 
-    @ManyToOne(() => Modules, (module) => module.lessons)
-    module: Modules
+    @ManyToOne(() => Modules, (modules) => modules.lessons)
+    modules: Modules
 }

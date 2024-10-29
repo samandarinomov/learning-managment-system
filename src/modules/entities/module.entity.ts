@@ -13,6 +13,6 @@ export class Modules {
     @ManyToOne(() => Course, (course) => course.modules)
     course: Course;
 
-    @OneToMany(() => Lesson, (lesson) => lesson.module)
+    @OneToMany(() => Lesson, (lesson) => lesson.modules)
     lessons: Lesson[]
 }
