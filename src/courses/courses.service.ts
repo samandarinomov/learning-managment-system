@@ -21,7 +21,7 @@ export class CourseService {
       'modules',
       'modules.lessons',
       'modules.lessons.assignment',
-      'modules.lessons.assignment.result'  
+      'modules.lessons.assignment.results'  
     ]})
     return course
   }

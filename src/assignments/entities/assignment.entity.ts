@@ -1,7 +1,7 @@
 import { Lesson } from "src/lessons/entities/lesson.entity";
 import { Modules } from "src/modules/entities/module.entity";
 import { Result } from "src/results/entities/result.entity";
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn, JoinColumn } from "typeorm";
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn, JoinColumn, ManyToOne } from "typeorm";
 
 @Entity()
 export class Assignment {
@@ -21,6 +21,6 @@ export class Assignment {
     @JoinColumn({ name: 'lessonId' })
     lesson: Lesson;
 
-    @OneToOne(() => Result, result => result.assignment)
-    result: Result;
+    @ManyToOne(() => Result, result => result.assignment)
+    results: Result[];
 }

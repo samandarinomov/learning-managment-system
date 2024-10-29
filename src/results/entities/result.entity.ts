@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn, ManyToOne, OneToMany } from "typeorm";
 import { Assignment } from "src/assignments/entities/assignment.entity";
 import { User } from "src/user/entities/user.entity";
 
@@ -16,7 +16,7 @@ export class Result {
     @Column({type: 'int', default: 0})
     score: number
 
-    @OneToOne(() => Assignment, assignment => assignment.result)
+    @OneToMany(() => Assignment, assignment => assignment.results)
     @JoinColumn()
     assignment: Assignment;
 

@@ -1,0 +1,23 @@
+version: '1.0'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=Fede1519
+    container_name: postgres
+    ports:
+      - '5433:5432'
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-docker-exam
+    ports:
+      - '4000:3000'
+    depends_on:
+      - db
+    volumes:
+      - ./src:/back/src
