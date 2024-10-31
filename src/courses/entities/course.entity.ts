@@ -30,7 +30,7 @@ export class Course {
   @Column({ type: 'varchar' })
   category: String;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'enum', enum: ['beginner', 'junior', 'middle', 'senior'] })
   level: Number;
 
   @ManyToOne(() => User, (user) => user.course)

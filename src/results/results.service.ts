@@ -20,9 +20,9 @@ export class ResultsService {
     private readonly jwtService: JwtService,
   ) { }
 
-  async create(accessToken: string, { AssignmentAnswer, assignmentId }: CreateResultDto) {
+  async create(access_token: string, { AssignmentAnswer, assignmentId }: CreateResultDto) {
     try {
-      const payload = this.jwtService.verify(accessToken);
+      const payload = this.jwtService.verify(access_token, {secret: 'verySecret'});
       const user = await this.userRepository.findOne({ where: { id: payload.id } });
       if (!user) {
         throw new UnauthorizedException('User not found');

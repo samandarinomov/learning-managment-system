@@ -10,10 +10,6 @@ import { Enrollment } from 'src/enrollment/entities/enrollment.entity';
 
 @Module({
   imports: [
-    JwtModule.register({
-      secret: 'verySecret',
-      signOptions: { expiresIn: '1h' }
-    }),
     TypeOrmModule.forFeature([Modules, Course, User, Enrollment]),
   ],
   controllers: [CourseController],

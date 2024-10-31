@@ -29,7 +29,7 @@ export class AuthController {
       sameSite: 'none',
       httpOnly: true,
     });
-    return res.send({ newUser, access_token });
+    return res.send('succesfull sign in');
   }
 
   @Post('login')

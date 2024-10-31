@@ -9,9 +9,6 @@ import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
-    JwtModule.register({
-      secret: 'verySecret'
-    }),
     TypeOrmModule.forFeature([Result, Assignment, User])],
   controllers: [ResultsController],
   providers: [ResultsService],

@@ -9,9 +9,6 @@ import { Assignment } from 'src/assignments/entities/assignment.entity';
 
 @Module({
   imports: [
-    JwtModule.register({
-      secret: 'verySecret'
-    }),
     TypeOrmModule.forFeature([Lesson, Modules])],
   controllers: [LessonsController],
   providers: [LessonsService],

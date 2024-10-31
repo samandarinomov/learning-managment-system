@@ -1,6 +1,13 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateCourseDto } from './create-course.dto';
-import { IsString, IsNumber, IsNotEmpty } from 'class-validator';
+import { IsString, IsNumber, IsNotEmpty, IsEnum } from 'class-validator';
+
+enum level {
+    beginner = 'beginner',
+    junior = 'junior',
+    middle = 'middle',
+    senior = 'senior'
+  }
 
 export class UpdateCourseDto extends PartialType(CreateCourseDto) {
     @IsString()
@@ -23,7 +30,7 @@ export class UpdateCourseDto extends PartialType(CreateCourseDto) {
     @IsNotEmpty()
     category: String
 
-    @IsNumber()
     @IsNotEmpty()
-    level: Number
+    @IsEnum(level)
+    level: level
 }

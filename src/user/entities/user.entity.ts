@@ -26,7 +26,7 @@ export class User {
   @ManyToOne(()=> Course, (course) => course.users)
   course: Course 
 
-  @Column({ type: 'varchar'})
+  @Column({ type: 'enum',  enum: ['admin', 'user']})
   role: String;
 
   @ManyToOne(() => Enrollment, enrollment => enrollment.user)

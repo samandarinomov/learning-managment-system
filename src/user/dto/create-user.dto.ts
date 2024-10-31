@@ -2,7 +2,13 @@ import {
     IsNotEmpty,
     IsString,
     IsEmail,
+    IsEnum,
   } from 'class-validator';
+
+  enum role {
+    admin = 'admin',
+    user = 'user',
+  }
   
   export class CreateUserDto {
     @IsNotEmpty()
@@ -18,7 +24,7 @@ import {
     password: string;
 
     @IsNotEmpty()
-    @IsString()
-    role: string
+    @IsEnum(role)
+    role: role
   }
   

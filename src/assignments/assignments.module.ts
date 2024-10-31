@@ -14,9 +14,6 @@ import { Course } from 'src/courses/entities/course.entity';
 @Module({
   imports: [
     TypeOrmModule.forFeature([ Assignment, Result, Lesson, Modules, Course]),
-    JwtModule.register({
-      secret: 'verySecret'
-    })
   ],
   controllers: [AssignmentsController, ModulesController],
   providers: [AssignmentsService, ModulesService],

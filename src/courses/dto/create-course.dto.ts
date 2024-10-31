@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsEnum, IsNotEmpty, IsNumber, IsString } from "class-validator";
+
+enum level {
+    beginner = 'beginner',
+    junior = 'junior',
+    middle = 'middle',
+    senior = 'senior'
+  }
 
 export class CreateCourseDto {
     @IsNotEmpty()
@@ -22,6 +29,6 @@ export class CreateCourseDto {
     category: String
 
     @IsNotEmpty()
-    @IsNumber()
-    level: Number
+    @IsEnum(level)
+    level: level
 }

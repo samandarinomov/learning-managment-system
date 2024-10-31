@@ -35,8 +35,8 @@ export class AuthService {
       role: newUser.role
     };
     let refresh_token = await this.jwtService.sign(payload);
-    let access_token = await this.jwtService.sign(payload, { expiresIn: '1h' });
-    return { newUser, refresh_token, access_token };
+    let access_token = await this.jwtService.sign(payload, { expiresIn: '3h' });
+    return 'Succesfully sign in';
   }
 
   async login(loginDto: LoginDto): Promise<any> {
@@ -49,8 +49,8 @@ export class AuthService {
     
     let payload = { id: user.id, login: user.email, role: user.role };
     let refresh_token = await this.jwtService.sign(payload, {expiresIn: '7d' });
-    let access_token = await this.jwtService.sign(payload, { expiresIn: '1h' });
-    return {user, refresh_token, access_token};
+    let access_token = await this.jwtService.sign(payload, { expiresIn: '3h' });
+    return { refresh_token, access_token};
   }
 
   async getMyData(request) {

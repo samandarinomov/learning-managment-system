@@ -11,9 +11,6 @@ import { Modules } from 'src/modules/entities/module.entity';
 
 @Module({
   imports: [
-    JwtModule.register({
-     secret: 'verySecret'
-    }),
     TypeOrmModule.forFeature([Enrollment, Course, User, Lesson, Modules])],
   controllers: [EnrollmentsController],
   providers: [EnrollmentsService],

@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, UnauthorizedException } from '@nestjs/common';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
 import { Course } from './entities/course.entity';
@@ -7,6 +7,8 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class CourseService {
+  jwtService: any;
+  userRepository: any;
   constructor(
     @InjectRepository(Course)
     private courseRepository: Repository<Course>,) {}
@@ -44,16 +46,4 @@ export class CourseService {
     return "Course successfully deleted"
   }
 
-  async searchCourses(category: string, keyword: string) {
-    const queryBuilder = this.courseRepository.createQueryBuilder('course');
-    if (category) {
-      queryBuilder.andWhere('course.category = :category', { category });
-    }
-
-    if (keyword) {
-      queryBuilder.andWhere('course.name LIKE :keyword', { keyword: `%${keyword}%` });
-    }
-  
-    return await queryBuilder.getMany();
-  }
   }

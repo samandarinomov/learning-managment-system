@@ -10,9 +10,6 @@ import { Lesson } from 'src/lessons/entities/lesson.entity';
 
 @Module({
   imports: [
-    JwtModule.register({
-     secret: 'verySecret'
-    }),
     TypeOrmModule.forFeature([Course, Modules, Assignment, Lesson])],
   controllers: [ModulesController],
   providers: [ModulesService],

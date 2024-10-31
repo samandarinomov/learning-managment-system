@@ -22,12 +22,12 @@ import { EnrollmentsModule } from './enrollment/enrollment.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'db',
+      host: 'localhost',
       port: 5432,
       password: 'Fede1519',
       username: 'postgres',
       entities: [User, Assignment, Auth, Course, Modules, Lesson, Result],
-      database: 'postgres',
+      database: 'n9',
       synchronize: true,
       logging: false,
       autoLoadEntities: true
