@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullname\": \"Mbappe\",\r\n    \"email\": \"mbappe@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"fullname\": \"kilian\",\r\n    \"email\": \"kmbappe@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"user\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"mbappe@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"raw": "{\r\n    \"email\": \"samandar@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -73,7 +73,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxOTkzMTYsImV4cCI6MTczMDIwMjkxNn0.4fp8ojV5NlbUVmplEdRbzHsMm2CD5nqwhO5c-gNyyIA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTkyNDMsImV4cCI6MTczMDM2Mjg0M30.4EEi8IUALTocfUgGRMS3kDe--zl402PX0mtDqNpBTFQ",
 									"type": "string"
 								}
 							]
@@ -109,7 +109,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxOTc1NzcsImV4cCI6MTczMDIwMTE3N30.PBdRl5R87au07iQvJRyDOj8BLNJh7ynHvldVsqNhoGc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjM0MTEsImV4cCI6MTczMDM3NDIxMX0.UGZjK8iNQ4Tco2qYfpXwHhoMqOo9b7z66EBksy2FbjA",
 									"type": "string"
 								}
 							]
@@ -143,7 +143,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxOTkzMTYsImV4cCI6MTczMDIwMjkxNn0.4fp8ojV5NlbUVmplEdRbzHsMm2CD5nqwhO5c-gNyyIA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNjU1MzEsImV4cCI6MTczMDM3NjMzMX0.43Pzy3g05yw6o7s7lij5itWtxs-met9feFio4eWF4O",
 									"type": "string"
 								}
 							]
@@ -159,7 +159,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Frontend\",\r\n    \"description\": \"Vue.js \",\r\n    \"price\": 132,\r\n    \"teacher\": \"xxxxxxx\",\r\n    \"category\": \"Dasturlash\",\r\n    \"level\": 0\r\n}",
+							"raw": "{\r\n    \"name\": \"Graphc Disagne\",\r\n    \"description\": \"Photoshop \",\r\n    \"price\": 132,\r\n    \"teacher\": \"M.Asadov\",\r\n    \"category\": \"Dizayn\",\r\n    \"level\": \"beginner\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -187,7 +187,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwMjMyMDUyLCJleHAiOjE3MzAyMzU2NTJ9.vtfsHh8iLEJOTUsTA3u6e9viI6lmS2ECUuXjPl_ylZs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -215,7 +215,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -224,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Front\",\r\n    \"description\": \"Vue.js \",\r\n    \"price\": 132,\r\n    \"teacher\": \"xxxxxxx\",\r\n    \"category\": \"Dasturlash\",\r\n    \"level\": 1\r\n}",
+							"raw": "{\r\n    \"name\": \"Front\",\r\n    \"description\": \"Vue.js \",\r\n    \"price\": 132,\r\n    \"teacher\": \"xxxxxxx\",\r\n    \"category\": \"Dasturlash\",\r\n    \"level\": \"junior\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,14 +232,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/course/2",
+							"raw": "localhost:3000/course/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"course",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -253,7 +253,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -261,14 +261,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/course/2",
+							"raw": "localhost:3000/course/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"course",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -287,7 +287,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:3000/course/search?category=dasturlash&keyword=js",
+							"raw": "localhost:3000/course/search?keyword=Node.js",
 							"host": [
 								"localhost"
 							],
@@ -299,11 +299,12 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "dasturlash"
+									"value": "dasturlash",
+									"disabled": true
 								},
 								{
 									"key": "keyword",
-									"value": "js"
+									"value": "Node.js"
 								}
 							]
 						}
@@ -323,7 +324,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -332,7 +333,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"2-oy\",\r\n    \"courseId\": 1\r\n}",
+							"raw": "{\r\n    \"name\": \"2-oy\",\r\n    \"courseId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -360,7 +361,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMTEwNTUsImV4cCI6MTczMDIxNDY1NX0.l53msAlio4mZbx2Eu8LHscnjTFLcZNl8dn2CHB0tLck",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -388,7 +389,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -426,7 +427,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -460,7 +461,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -469,7 +470,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Flowgorithm for operatori\",\r\n    \"content\": \"Vedio2\",\r\n    \"modulesId\": 1 \r\n}",
+							"raw": "{\r\n    \"name\": \"Flowgorithmda for operatori\",\r\n    \"content\": \"Vedio2\",\r\n    \"modulesId\": 1 \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -497,7 +498,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMTU0NDMsImV4cCI6MTczMDIxOTA0M30.eBcIVFp7DYI3wGe-l72l7fi4nQSbXGUOs6dK0RfI7xs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -525,7 +526,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -534,7 +535,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"dwsew\",\r\n    \"content\": \"sfsfs\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Flowgorithmda for operatori\",\r\n    \"content\": \"vedio\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -542,14 +543,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/lesson/2",
+							"raw": "localhost:3000/lesson/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"lesson",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -563,7 +564,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMDM1MDcsImV4cCI6MTczMDIwNzEwN30.e_qW6gg_wYKDz4to7E1JrNHaZ25wmsX-TCaU3Q71Sqg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -597,7 +598,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMTU0NDMsImV4cCI6MTczMDIxOTA0M30.eBcIVFp7DYI3wGe-l72l7fi4nQSbXGUOs6dK0RfI7xs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -606,7 +607,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"task\": \"10 ta masa\",\r\n    \"description\": \"Leetcode\",\r\n    \"deadline\": \"10 soat\",\r\n    \"lessonId\": 1\r\n}",
+							"raw": "{\r\n    \"task\": \"10 ta masala\",\r\n    \"description\": \"Leetcode\",\r\n    \"deadline\": \"10 soat\",\r\n    \"lessonId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -634,7 +635,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAyMTQ4NjAsImV4cCI6MTczMDIxODQ2MH0.1wodajSBOmwgnSSW6UPGYLUA8jcaIp9HpQRWMzwR1SM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -662,7 +663,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMTU0NDMsImV4cCI6MTczMDIxOTA0M30.eBcIVFp7DYI3wGe-l72l7fi4nQSbXGUOs6dK0RfI7xs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -679,14 +680,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/assignment/10",
+							"raw": "localhost:3000/assignment/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"assignment",
-								"10"
+								"1"
 							]
 						}
 					},
@@ -700,7 +701,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAyMTU0NDMsImV4cCI6MTczMDIxOTA0M30.eBcIVFp7DYI3wGe-l72l7fi4nQSbXGUOs6dK0RfI7xs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
 									"type": "string"
 								}
 							]
@@ -708,14 +709,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/assignment/10",
+							"raw": "localhost:3000/assignment/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"assignment",
-								"10"
+								"1"
 							]
 						}
 					},
@@ -734,7 +735,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAyMjQ2NDYsImV4cCI6MTczMDIyODI0Nn0.O4Qb5vlCAsOj6LF_MsBYVO_UFmE67HD6AvQwnwx1BJk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -742,14 +743,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/enrollments/1",
+							"raw": "localhost:3000/enrollments/2",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"enrollments",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -763,7 +764,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAyMjQ2NDYsImV4cCI6MTczMDIyODI0Nn0.O4Qb5vlCAsOj6LF_MsBYVO_UFmE67HD6AvQwnwx1BJk",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -789,14 +790,14 @@
 			"name": "Result",
 			"item": [
 				{
-					"name": "createAnswerAssignment",
+					"name": "createAnswerAssignment(Vazifani topshirish)",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAyMzE2MDEsImV4cCI6MTczMDIzNTIwMX0.i2MjEi-xZdTFgpmSXkMaYq1E51iTaJcxNF8mvDBfzVg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -805,7 +806,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"AssignmentAnswer\": \"masalalar javobi algoritm ko'rinishida\",\r\n    \"assignmentId\": 13,\r\n    \"userId\": 3\r\n}",
+							"raw": "{\r\n    \"AssignmentAnswer\": \"masalalar javobi algoritm ko'rinishida\",\r\n    \"assignmentId\": 1,\r\n    \"userId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -826,14 +827,14 @@
 					"response": []
 				},
 				{
-					"name": "BahoQo'yish",
+					"name": "BahoQo'yish(Admin)",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwMjMyMDUyLCJleHAiOjE3MzAyMzU2NTJ9.vtfsHh8iLEJOTUsTA3u6e9viI6lmS2ECUuXjPl_ylZs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNjIzMzAsImV4cCI6MTczMDM3MzEzMH0.gNU1wawjv-SiMrgaqC42I4FTT5s8TXXDhowoV0NOaBw",
 									"type": "string"
 								}
 							]
@@ -871,7 +872,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAyMzE2MDEsImV4cCI6MTczMDIzNTIwMX0.i2MjEi-xZdTFgpmSXkMaYq1E51iTaJcxNF8mvDBfzVg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
 									"type": "string"
 								}
 							]
@@ -892,14 +893,14 @@
 					"response": []
 				},
 				{
-					"name": "DeleteResult",
+					"name": "DeleteResult(Admin)",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwMjMyMDUyLCJleHAiOjE3MzAyMzU2NTJ9.vtfsHh8iLEJOTUsTA3u6e9viI6lmS2ECUuXjPl_ylZs",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNjIzMzAsImV4cCI6MTczMDM3MzEzMH0.gNU1wawjv-SiMrgaqC42I4FTT5s8TXXDhowoV0NOaBw",
 									"type": "string"
 								}
 							]
