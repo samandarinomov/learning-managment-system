@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=Fede1519
     container_name: postgres
     ports:
-      - '5433:5432'
+      - '5450:5432'
 
   server:
     build:
@@ -20,4 +20,4 @@ services:
     depends_on:
       - db
     volumes:
-      - ./src:/back/src
+      - ./src:/server/src
