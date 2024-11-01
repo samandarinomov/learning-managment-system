@@ -1,0 +1,1008 @@
+{
+	"info": {
+		"_postman_id": "2ef1856d-14bf-4cae-be89-9d0d189d05e2",
+		"name": "server Uchun documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34643018"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"xxxxxx\",\r\n    \"email\": \"samandarr@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/auth/register",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kmbappe@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/auth/login",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTkyNDMsImV4cCI6MTczMDM2Mjg0M30.4EEi8IUALTocfUgGRMS3kDe--zl402PX0mtDqNpBTFQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "verySecret",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzMwMTkyMTg2LCJleHAiOjE3MzAxOTU3ODZ9.xbR0PSNgz4-gbDzBvXAv1q-vAxbQlJkNHKKAox0svUo",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "85.193.91.138:3000/auth/logout",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY5NDc1LCJleHAiOjE3MzA0ODAyNzV9.pP3nS25Lu7z3wESnrEeKt7T4g79HmDI6R6qk3qmrBFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/auth/me",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "CreateCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNDY5MTU3LCJleHAiOjE3MzA0Nzk5NTd9.lt9g7qJIp3ZIjXCGkjzZxu6p4WnVU_y_ApeTIVV_HsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTczMDExMjQyOSwiZXhwIjoxNzMwMT",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Graphc Disagne\",\r\n    \"description\": \"Photoshop \",\r\n    \"price\": 132,\r\n    \"teacher\": \"M.Asadov\",\r\n    \"category\": \"Dizayn\",\r\n    \"level\": \"beginner\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/course",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY4OTU2LCJleHAiOjE3MzA0Nzk3NTZ9.eIL8DfGNRP9hKc_CGd_eSqErH6PB0VbVkencIEtBOMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/course",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Front\",\r\n    \"description\": \"Vue.js \",\r\n    \"price\": 132,\r\n    \"teacher\": \"xxxxxxx\",\r\n    \"category\": \"Dasturlash\",\r\n    \"level\": \"junior\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/course/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/course/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterByCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "85.193.91.138:3000/course/search?keyword=Node.js",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"course",
+								"search"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "dasturlash",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "Node.js"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Modules",
+			"item": [
+				{
+					"name": "createModules",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNDY5MTU3LCJleHAiOjE3MzA0Nzk5NTd9.lt9g7qJIp3ZIjXCGkjzZxu6p4WnVU_y_ApeTIVV_HsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1-oy\",\r\n    \"courseId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/modules",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"modules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getModules",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY4OTU2LCJleHAiOjE3MzA0Nzk3NTZ9.eIL8DfGNRP9hKc_CGd_eSqErH6PB0VbVkencIEtBOMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/modules",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"modules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateModules",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/modules/2",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"modules",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteModules",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/modules/2",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"modules",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lesson",
+			"item": [
+				{
+					"name": "CreateLesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNDY5MTU3LCJleHAiOjE3MzA0Nzk5NTd9.lt9g7qJIp3ZIjXCGkjzZxu6p4WnVU_y_ApeTIVV_HsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Photoshop\",\r\n    \"content\": \"Vedio2\",\r\n    \"modulesId\": 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/lesson",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"lesson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllLesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/lesson",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"lesson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Flowgorithmda for operatori\",\r\n    \"content\": \"vedio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/lesson/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"lesson",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLesson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/lesson/2",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"lesson",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignment",
+			"item": [
+				{
+					"name": "CreateAssignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY5NDc1LCJleHAiOjE3MzA0ODAyNzV9.pP3nS25Lu7z3wESnrEeKt7T4g79HmDI6R6qk3qmrBFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task\": \"Iphoneni bannerini chizish\",\r\n    \"description\": \"Photoshopdan foydalaning\",\r\n    \"deadline\": \"10 soat\",\r\n    \"lessonId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/assignment",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"assignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAssignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/assignment",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"assignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAssignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task\": \"30 ta masala yechish\",\r\n    \"description\": \"Leetcodedan olasizlar\",\r\n    \"deadline\": \"36 soat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/assignment/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"assignment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAssignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNTk0NjUsImV4cCI6MTczMDM2MzA2NX0.6g5kVAG9mA5z4eE-AkuLytItSYLYT52igIHpLdU2rQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/assignment/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"assignment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enrollment",
+			"item": [
+				{
+					"name": "joinCourse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/enrollments/2",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"enrollments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getJoinedCourses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJtYmFwcGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzAzNjUxOTIsImV4cCI6MTczMDM3NTk5Mn0.ymb4mjOvT4cIX_lpC_CpueDS3YCtS7mE9WjUEhRDIfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/enrollments",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"enrollments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Result",
+			"item": [
+				{
+					"name": "createAnswerAssignment(Vazifani topshirish)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY5NDc1LCJleHAiOjE3MzA0ODAyNzV9.pP3nS25Lu7z3wESnrEeKt7T4g79HmDI6R6qk3qmrBFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AssignmentAnswer\": \"masalalar javobi algoritm ko'rinishida\",\r\n    \"assignmentId\": 1,\r\n    \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/result",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BahoQo'yish(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJzYW1hbmRhcnJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNDY5MTU3LCJleHAiOjE3MzA0Nzk5NTd9.lt9g7qJIp3ZIjXCGkjzZxu6p4WnVU_y_ApeTIVV_HsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherFeedBack\": \"Masalalar yaxshi yechilgan. Man Yaxshi ustozman 100 ball qo'yaman\",\r\n    \"score\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "85.193.91.138:3000/result/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"result",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetResult",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibG9naW4iOiJrbWJhcHBlQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNDY5NDc1LCJleHAiOjE3MzA0ODAyNzV9.pP3nS25Lu7z3wESnrEeKt7T4g79HmDI6R6qk3qmrBFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/result",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteResult(Admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibG9naW4iOiJzYW1hbmRhckBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzNjIzMzAsImV4cCI6MTczMDM3MzEzMH0.gNU1wawjv-SiMrgaqC42I4FTT5s8TXXDhowoV0NOaBw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "85.193.91.138:3000/result/1",
+							"host": [
+								"85",
+								"193",
+								"91",
+								"138"
+							],
+							"port": "3000",
+							"path": [
+								"result",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
